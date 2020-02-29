@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SplashScreen"
+    android:background="#ee4c7b"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/logo_dashboard"
+            android:layout_width="@dimen/logo_dashboard_size"
+            android:layout_height="@dimen/logo_dashboard_size"
+            android:src="@drawable/logo_dashboard3"
+            android:layout_gravity="center_vertical|center"
+            android:scaleType="fitXY"
+            />
+
+        <TextView
+            android:id="@+id/yoofix_text"
+            android:layout_gravity="center_vertical|center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yoofix"
+            android:fontFamily="@font/fredokaone_regular"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/logo_font_size"
+            />
+
+        <TextView
+            android:id="@+id/yoofix_sub_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yoofix_sub_text"
+            android:layout_gravity="center_vertical|center"
+            android:textColor="#ffff"
+            android:textSize="@dimen/yoofix_sub_text_size"
+            android:fontFamily="@font/helvetica_400"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

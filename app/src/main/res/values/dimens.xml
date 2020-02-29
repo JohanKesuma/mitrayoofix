@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_dashboard_size">250dp</dimen>
+    <dimen name="logo_font_size">50dp</dimen>
+    <dimen name="yoofix_sub_text_size">15dp</dimen>
+</resources>

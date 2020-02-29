@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mitra Yoofix</string>
+    <string name="splash_screen">Splash Screen</string>
+    <string name="yoofix">Yoofix</string>
+    <string name="yoofix_sub_text">Helping Together</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="register_activity_title">Daftar</string>
+</resources>
