@@ -59,13 +59,39 @@ public class RegisterActivity extends AppCompatActivity {
         }, day, month, year);
 
         String[] data = {"Laki-Laki", "Perempuan"};
+        String[] jenisService = {"Service Ac",
+                "Perledengan",
+                "Kebersihan",
+                "Mekanik Elektrik",
+                "Pengecatan",
+                "Pembasmi Hama",
+                "Elektronik",
+                "Laundry"
+        };
 
-        ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.spinner_item_selected, data);
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        ArrayAdapter jenisKelaminadapter = new ArrayAdapter<String>(this, R.layout.spinner_item_selected, data);
+        jenisKelaminadapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
-        Spinner spinner = findViewById(R.id.spinner);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        ArrayAdapter jenisKServiceadapter = new ArrayAdapter<String>(this, R.layout.spinner_item_selected, jenisService);
+        jenisKServiceadapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
+
+        Spinner jenisKelaminSpinner = findViewById(R.id.spinner);
+        jenisKelaminSpinner.setAdapter(jenisKelaminadapter);
+        jenisKelaminSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(RegisterActivity.this, parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        Spinner jenisServiceSpinner = findViewById(R.id.spinner2);
+        jenisServiceSpinner.setAdapter(jenisKServiceadapter);
+        jenisServiceSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(RegisterActivity.this, parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
@@ -125,5 +151,9 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void showDatePicker() {
         dpd.show();
+    }
+
+    public void onBackButtonClicked(View view) {
+
     }
 }

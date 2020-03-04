@@ -3,7 +3,7 @@
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/item_text"
         android:textColor="#000"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorDropdownBackground"
         style="?attr/spinnerDropDownItemStyle"
         android:singleLine="true"
         android:layout_width="match_parent"
