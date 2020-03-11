@@ -6,8 +6,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:background="@drawable/bg_fix" />
+        android:layout_height="320dp"
+        android:background="@drawable/bg_login" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"

@@ -31,10 +31,10 @@ public class RegisterPageOneFragment extends Fragment {
 
     private static final int NEXT_PAGE = 1;
 
-    AppCompatEditText tgl_lahir;
-    Calendar c;
-    DatePickerDialog dpd;
-    Button nextButton;
+    private AppCompatEditText tgl_lahir;
+    private Calendar c;
+    private DatePickerDialog dpd;
+    private Button nextButton;
 
     private RegisterPagerActivity activity;
 

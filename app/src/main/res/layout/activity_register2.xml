@@ -4,12 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.RegisterActivity">
-
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="220dp"-->
-<!--        android:background="@drawable/bg_fix" />-->
+    android:background="#F3F5F9"
+    tools:context=".activities.RegisterPagerActivity">
 
 
     <ScrollView
@@ -40,8 +36,7 @@
                     android:layout_width="50dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
-                    android:onClick="onBackButtonClicked"
-                    android:src="@drawable/ic_arrow_back_white_32dp" />
+                    android:src="@drawable/ic_arrow_back_black_24dp" />
 
                 <TextView
                     android:id="@+id/tvSignUp"
@@ -51,11 +46,69 @@
                     android:layout_marginTop="40dp"
                     android:elevation="10dp"
                     android:text="Daftar"
-                    android:textColor="#fff"
+                    android:textColor="#000"
                     android:textSize="30sp"
                     android:transitionName="tvLogin" />
 
             </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="0dp"
+                app:cardBackgroundColor="#FFC107"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Uji Pengetahuan"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#fff"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Jawablah pertanyaan di bawah ini sesuai pengalaman Anda selama mengerjakan service AC"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
@@ -289,10 +342,10 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:background="@drawable/bg_ui"
+                    android:background="@drawable/bg_ui2"
                     android:text="Back"
                     android:textAllCaps="false"
-                    android:textColor="#fff" />
+                    android:textColor="#DD1C5F" />
 
                 <Button
                     android:id="@+id/next_button"
