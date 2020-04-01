@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_list"
+        android:title="Pesanan"/>
+
+    <item
+        android:id="@+id/navigation_inbox"
+        android:icon="@drawable/ic_mail_outline_black_24dp"
+        android:title="Inbox"/>
+    <item
+        android:id="@+id/navigation_help"
+        android:icon="@drawable/ic_question"
+        android:title="Help"/>
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/ic_user"
+        android:title="Akun"/>
+
+</menu>

@@ -10,4 +10,8 @@
     <string name="page2_soal_3">3. Berikan alasan mengapa AC indoor lebih baik membelakangi pintu?</string>
     <string name="page2_soal_4">4. Sebutkan 3 alasan mengapa AC bisa terjadi kebocoran / air menetes?</string>
     <string name="page2_soal_5">5. Apa yang anda lakukan kepada customer jika ada penambahan sparepart dan tambahan kerusakan lainnya?</string>
+    <string name="akun_saya_navigation_title">Akun Saya</string>
+    <string name="bantuan_navigation_title">Bantuan</string>
+    <string name="inbox_navigation_title">Inbox</string>
+    <string name="pesanan_navigation_title">Pesanan</string>
 </resources>
