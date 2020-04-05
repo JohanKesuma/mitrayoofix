@@ -11,13 +11,14 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.mitrayoofix.R;
+import com.example.mitrayoofix.fragments.RegisterPageFourFragment;
 import com.example.mitrayoofix.fragments.RegisterPageOneFragment;
 import com.example.mitrayoofix.fragments.RegisterPageTreeFragment;
 import com.example.mitrayoofix.fragments.RegisterPageTwoFragment;
 
 public class RegisterPagerActivity extends FragmentActivity {
 
-    private static final int NUM_PAGES = 3;
+    private static final int NUM_PAGES = 4;
     private ViewPager mPager;
     private PagerAdapter pagerAdapter;
 
@@ -42,13 +43,15 @@ public class RegisterPagerActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            switch (position){
+            switch (position) {
                 case 0:
                     return new RegisterPageOneFragment();
                 case 1:
                     return new RegisterPageTwoFragment();
                 case 2:
                     return new RegisterPageTreeFragment();
+                case 3:
+                    return new RegisterPageFourFragment();
                 default:
                     return new RegisterPageOneFragment();
             }

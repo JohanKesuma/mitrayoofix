@@ -4,8 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F3F5F9"
-    tools:context=".activities.RegisterPagerActivity">
+    tools:context=".activities.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/bg_login" />
 
 
     <ScrollView
@@ -36,7 +40,8 @@
                     android:layout_width="50dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/ic_arrow_back_black_24dp" />
+                    android:onClick="onBackButtonClicked"
+                    android:src="@drawable/ic_arrow_back_white_32dp" />
 
                 <TextView
                     android:id="@+id/tvSignUp"
@@ -46,69 +51,27 @@
                     android:layout_marginTop="40dp"
                     android:elevation="10dp"
                     android:text="Daftar"
-                    android:textColor="#000"
+                    android:textColor="#fff"
                     android:textSize="30sp"
                     android:transitionName="tvLogin" />
 
             </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv0"
-                android:layout_width="match_parent"
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="0dp"
-                app:cardBackgroundColor="#FFC107"
-                app:cardCornerRadius="0dp"
-                app:cardElevation="4dp">
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginBottom="-60dp"
+                android:elevation="10dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Uji Pengetahuan"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv01"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="20dp"
-                app:cardBackgroundColor="#fff"
-                app:cardCornerRadius="0dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Jawablah pertanyaan di bawah ini sesuai pengalaman Anda selama mengerjakan service AC"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:onClick="onPhotoProfileClicked"
+                    android:src="@drawable/user" />
+            </LinearLayout>
 
 
             <androidx.cardview.widget.CardView
@@ -127,202 +90,222 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
+                        android:layout_marginTop="80dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="@string/page2_soal_1"
+                        android:text="Jenis Kelamin"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
 
-                        <RadioButton
+                    <Spinner
+                        android:id="@+id/spinner"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/dropdownListPreferredItemHeight"
+                        android:layout_margin="10dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/spinner_bg"
+                        android:dropDownWidth="300dp"
+                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
+                        android:paddingEnd="14dp"
+                        android:popupBackground="@android:color/white"
+                        android:popupElevation="3dp"
+                        android:stateListAnimator="@drawable/spinner_sla"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Tanggal Lahir"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/tgl_lahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:hint="Tanggal Lahir"
+                        android:onClick="onTanggalLahirClicked" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Jenis Service"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="Di atas AC indoor"
+                            android:text="Service AC"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="Sejajar dengan AC indoor"
+                            android:text="Perledengan"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
-                        <RadioButton
+                        <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
+                            android:layout_marginTop="10dp"
                             android:layout_marginRight="10dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="Dibawah AC indoor"
+                            android:text="Kebersihan"
                             android:textColor="#000"
                             android:textSize="14sp" />
-                    </RadioGroup>
 
-                </LinearLayout>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Mekanik Elektrik"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
 
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Pengecatan"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
 
-            </androidx.cardview.widget.CardView>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Pembasmi Hama"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Elektronik"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:text="Laundry"
+                            android:textColor="#000"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Upload foto KTP/SIM"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/page2_soal_2"
+                        android:layout_marginBottom="30dp"
+                        android:text="Tambah File" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Upload foto KK/SKCK"
+                        android:textColor="#000"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="Tambah File" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Alamat"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <androidx.appcompat.widget.AppCompatEditText
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
-                        android:layout_marginBottom="15dp"
-                        android:hint="Jawab disini" />
+                        android:layout_marginBottom="30dp"
+                        android:hint="Alamat" />
 
-                </LinearLayout>
+                    <com.example.mitrayoofix.CustomMapView
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
 
 
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
+                    <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/page2_soal_3"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="15dp"
-                        android:hint="Jawab disini" />
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/page2_soal_4"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="15dp"
-                        android:hint="Jawab disini" />
-
-                </LinearLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="@string/page2_soal_5"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="60dp"
-                        android:hint="Jawab disini" />
+                        android:text="Saya setuju dengan syarat dan ketentuan yang berlaku"
+                        android:textColor="#000"
+                        android:textSize="14sp">
+
+                    </CheckBox>
 
                 </LinearLayout>
 
@@ -341,7 +324,7 @@
                     android:id="@+id/prev_button"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
                     android:background="@drawable/bg_ui2"
                     android:text="Back"
                     android:textAllCaps="false"

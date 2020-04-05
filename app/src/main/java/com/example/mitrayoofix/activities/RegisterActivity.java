@@ -90,20 +90,6 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        Spinner jenisServiceSpinner = findViewById(R.id.spinner2);
-        jenisServiceSpinner.setAdapter(jenisKServiceadapter);
-        jenisServiceSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(RegisterActivity.this, parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(new OnMapReadyCallback() {

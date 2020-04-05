@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.RegisterPagerActivity">
+    tools:context=".activities.RegisterActivity">
 
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="320dp"-->
-<!--            android:background="@drawable/bg_login" />-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:background="@drawable/bg_login" />
 
 
     <ScrollView
@@ -26,9 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:paddingBottom="50dp"
             android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingBottom="50dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -40,6 +40,7 @@
                     android:layout_width="50dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
+                    android:onClick="onBackButtonClicked"
                     android:src="@drawable/ic_arrow_back_white_32dp" />
 
                 <TextView
@@ -68,6 +69,7 @@
                 <ImageView
                     android:layout_width="120dp"
                     android:layout_height="120dp"
+                    android:onClick="onPhotoProfileClicked"
                     android:src="@drawable/user" />
             </LinearLayout>
 
@@ -121,8 +123,7 @@
                         android:layout_marginRight="10dp"
                         android:drawableStart="@drawable/call12"
                         android:drawablePadding="10dp"
-                        android:hint="Nomor Telpon"
-                        android:inputType="number" />
+                        android:hint="Nomor Telpon" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -140,8 +141,7 @@
                         android:layout_marginRight="10dp"
                         android:drawableStart="@drawable/mail12"
                         android:drawablePadding="10dp"
-                        android:hint="Email"
-                        android:inputType="textEmailAddress" />
+                        android:hint="Email" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -176,159 +176,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginBottom="50dp"
+                        android:hint="Konfirmasi Kata Sandi"
                         android:drawableStart="@drawable/password"
                         android:drawablePadding="10dp"
-                        android:hint="Konfirmasi Kata Sandi"
                         android:inputType="textPassword" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Jenis Kelamin"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-
-                    <Spinner
-                        android:id="@+id/spinner"
-                        style="@style/Widget.AppCompat.Spinner"
-                        android:layout_width="match_parent"
-                        android:layout_height="?attr/dropdownListPreferredItemHeight"
-                        android:layout_margin="10dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/spinner_bg"
-                        android:dropDownWidth="300dp"
-                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                        android:paddingEnd="14dp"
-                        android:popupBackground="@android:color/white"
-                        android:popupElevation="3dp"
-                        android:stateListAnimator="@drawable/spinner_sla"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Tanggal Lahir"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/tgl_lahir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:hint="Tanggal Lahir" />
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Jenis Service"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-
-                    <Spinner
-                        android:id="@+id/spinner2"
-                        style="@style/Widget.AppCompat.Spinner"
-                        android:layout_width="match_parent"
-                        android:layout_height="?attr/dropdownListPreferredItemHeight"
-                        android:layout_margin="10dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:background="@drawable/spinner_bg"
-                        android:dropDownWidth="300dp"
-                        android:dropDownVerticalOffset="?attr/dropdownListPreferredItemHeight"
-                        android:paddingEnd="14dp"
-                        android:popupBackground="@android:color/white"
-                        android:popupElevation="3dp"
-                        android:stateListAnimator="@drawable/spinner_sla"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Upload foto KTP/SIM"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="30dp"
-                        android:text="Tambah File" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Upload foto KK/SKCK"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="30dp"
-                        android:text="Tambah File" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Alamat"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="30dp"
-                        android:hint="Alamat" />
-
-                    <com.example.mitrayoofix.CustomMapView
-                        android:id="@+id/mapView"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp" />
-
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="60dp"
-                        android:text="Saya setuju dengan syarat dan ketentuan yang berlaku"
-                        android:textColor="#000"
-                        android:textSize="14sp">
-
-                    </CheckBox>
 
                 </LinearLayout>
 

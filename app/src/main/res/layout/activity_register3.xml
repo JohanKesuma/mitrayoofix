@@ -7,6 +7,7 @@
     android:background="#F3F5F9"
     tools:context=".activities.RegisterPagerActivity">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -69,8 +70,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
                         android:text="Uji Pengetahuan"
                         android:textColor="#000"
@@ -97,16 +99,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="20dp"
-                        android:text="Silahkan baca pernyataan di bawah, Anda diharapkan untuk memilih pilihan yang paling sesuai dengan diri Anda saat ini. Tidak ada jawaban yang salah, pilihlah jawaban yang paling sesuai dengan diri Bapak/Ibu/Saudara dengan sejujur-jujurnya."
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Jawablah pertanyaan di bawah ini sesuai pengalaman Anda selama mengerjakan service AC"
                         android:textColor="#000"
                         android:textSize="14sp"
-                        android:textStyle="normal" />
+                        android:textStyle="" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv"
@@ -127,43 +130,22 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Saya tidak tergoda menggunakan uang palsu meskipun saya yakin saya tidak akan tertangkap"
+                        android:text="@string/page2_soal_1"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <RadioGroup
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
                             android:layout_marginRight="10dp"
                             android:layout_marginBottom="3dp"
-                            android:text="2"
+                            android:text="Di atas AC indoor"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -174,7 +156,7 @@
                             android:layout_marginTop="3dp"
                             android:layout_marginRight="10dp"
                             android:layout_marginBottom="3dp"
-                            android:text="3"
+                            android:text="Sejajar dengan AC indoor"
                             android:textColor="#000"
                             android:textSize="14sp" />
 
@@ -183,22 +165,17 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
+                            android:layout_marginRight="10dp"
                             android:layout_marginBottom="15dp"
-                            android:text="4"
+                            android:text="Dibawah AC indoor"
                             android:textColor="#000"
                             android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
                     </RadioGroup>
 
                 </LinearLayout>
 
-            </androidx.cardview.widget.CardView>
 
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cv2"
@@ -220,75 +197,21 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Saya tetap pergi bekerja meskipun situasi cuaca sedang buruk"
+                        android:text="@string/page2_soal_2"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="2"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="3"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="4"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
-                    </RadioGroup>
+                        android:hint="Jawab disini" />
 
                 </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 
@@ -312,75 +235,21 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Saya akan mengatakan sesuai fakta apapun konsekuensinya"
+                        android:text="@string/page2_soal_3"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="2"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="3"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="4"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
-                    </RadioGroup>
+                        android:hint="Jawab disini" />
 
                 </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 
@@ -404,75 +273,21 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="saya akan mengatakan sesuai fakta apapun konsekuensi?"
+                        android:text="@string/page2_soal_4"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="2"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="3"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="4"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
-                    </RadioGroup>
+                        android:hint="Jawab disini" />
 
                 </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 
@@ -496,378 +311,18 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Sikap saya terhadap orang yang pernah memperlakukan saya dengan buruk adalah 'maafkan dan lupakan'"
+                        android:text="@string/page2_soal_5"
                         android:textColor="#000"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai"></TextView>
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="2"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="3"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="4"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Apabila customer mengawasi saya selama bekerja, saya tetap bisa fokus pada pekerjaan"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="2"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="3"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="4"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Dalam menjalankan pekerjaan, seringkali saya bekerja sesuai dengan peraturan yang telah ditetapkan"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="2"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="3"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="4"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:text="Setelah bekerja, saya selalu berupaya untuk merapikan barang atau alat kerja dan menjaga kebersihan lingkungan kerja"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <RadioGroup
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginBottom="15dp"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Tidak\nSesuai" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="1"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="2"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginBottom="3dp"
-                            android:text="3"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <RadioButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_marginRight="15dp"
-                            android:layout_marginBottom="15dp"
-                            android:text="4"
-                            android:textColor="#000"
-                            android:textSize="14sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sangat\nSesuai" />
-                    </RadioGroup>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cv9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="4dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="15dp"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="60dp"
-                        android:text="Terimakasih atas antusiasme Bapak/Ibu. Semoga mendapatkan hasil yang terbaik."
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:hint="Jawab disini" />
 
                 </LinearLayout>
 
@@ -897,7 +352,7 @@
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_ui"
-                    android:text="Submit"
+                    android:text="Next"
                     android:textAllCaps="false"
                     android:textColor="#fff" />
             </LinearLayout>
