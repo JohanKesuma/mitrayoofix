@@ -17,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
     }
 
-    public void onMasukButtonClicked(View view) {
+    public void onDaftarClicked(View view) {
         Intent intent = new Intent(LoginActivity.this, RegisterPagerActivity.class);
         startActivity(intent);
     }

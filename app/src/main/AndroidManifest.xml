@@ -26,7 +26,7 @@
         </activity>
         <activity
             android:name=".activities.LoginActivity"
-            android:theme="@style/AppTheme.FullScreen">
+            android:theme="@style/AppTheme.FullScreen.Material">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,7 +47,7 @@
 
         <activity
             android:name=".activities.RegisterPagerActivity"
-            android:theme="@style/AppTheme.FullScreen">
+            android:theme="@style/AppTheme.FullScreen.Material">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

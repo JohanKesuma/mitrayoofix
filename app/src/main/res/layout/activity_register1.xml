@@ -39,9 +39,9 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="40dp"
-                    android:layout_marginEnd="10dp"
-                    android:onClick="onBackButtonClicked"
-                    android:src="@drawable/ic_arrow_back_white_32dp" />
+                    android:layout_marginEnd="0dp"
+                    android:tint="#fff"
+                    android:src="@drawable/ic_keyboard_arrow_left_white_32dp" />
 
                 <TextView
                     android:id="@+id/tvSignUp"
@@ -49,10 +49,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:layout_marginTop="40dp"
-                    android:elevation="10dp"
                     android:text="Daftar"
                     android:textColor="#fff"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     android:transitionName="tvLogin" />
 
             </LinearLayout>
@@ -84,103 +83,106 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:padding="15dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:theme="@style/TextLabel"
                         android:layout_marginTop="80dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
-                        android:text="Nama Lengkap"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <androidx.appcompat.widget.AppCompatEditText
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Nama Lengkap"
+                            android:drawableStart="@drawable/user_test"
+                            android:drawablePadding="10dp">
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:drawableStart="@drawable/user_test"
-                        android:drawablePadding="10dp"
-                        android:hint="Nama Lengkap" />
+                        android:theme="@style/TextLabel"
+                        android:layout_marginBottom="10dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Nomor Telpon"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Nomor Telepon"
+                            android:inputType="phone"
+                            android:drawableLeft="@drawable/call12"
+                            android:drawableStart="@drawable/call12"
+                            android:drawablePadding="10dp">
+                        </com.google.android.material.textfield.TextInputEditText>
 
-                    <androidx.appcompat.widget.AppCompatEditText
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:drawableStart="@drawable/call12"
-                        android:drawablePadding="10dp"
-                        android:hint="Nomor Telpon" />
+                        android:theme="@style/TextLabel"
+                        android:layout_marginBottom="10dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Email"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress"
+                            android:drawableLeft="@drawable/mail12"
+                            android:drawableStart="@drawable/mail12"
+                            android:drawablePadding="10dp">
+                        </com.google.android.material.textfield.TextInputEditText>
 
-                    <androidx.appcompat.widget.AppCompatEditText
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:drawableStart="@drawable/mail12"
-                        android:drawablePadding="10dp"
-                        android:hint="Email" />
+                        android:theme="@style/TextLabel"
+                        android:layout_marginBottom="10dp"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleDrawable="@drawable/show_pass_selector"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Kata Sandi"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Password"
+                            android:inputType="textPassword"
+                            android:drawableLeft="@drawable/password"
+                            android:drawableStart="@drawable/password"
+                            android:drawablePadding="10dp">
+                        </com.google.android.material.textfield.TextInputEditText>
 
-                    <androidx.appcompat.widget.AppCompatEditText
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:drawableLeft="@drawable/password"
-                        android:drawablePadding="10dp"
-                        android:hint="Kata Sandi"
-                        android:inputType="textPassword" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:text="Konfirmasi Kata Sandi"
-                        android:textColor="#000"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
+                        android:theme="@style/TextLabel"
                         android:layout_marginBottom="50dp"
-                        android:hint="Konfirmasi Kata Sandi"
-                        android:drawableStart="@drawable/password"
-                        android:drawablePadding="10dp"
-                        android:inputType="textPassword" />
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleDrawable="@drawable/show_pass_selector"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Konfirmasi Password"
+                            android:inputType="textPassword"
+                            android:drawableLeft="@drawable/password"
+                            android:drawableStart="@drawable/password"
+                            android:drawablePadding="10dp">
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 

@@ -5,16 +5,13 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.Fragment;
 
 import com.example.mitrayoofix.CustomMapView;
@@ -24,6 +21,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.Calendar;
 
@@ -31,7 +29,7 @@ public class RegisterPageTwoFragment extends Fragment {
     private static final int NEXT_PAGE = 2;
     private static final int PREV_PAGE = 0;
 
-    private AppCompatEditText tgl_lahir;
+    private TextInputEditText tgl_lahir;
     private DatePickerDialog dpd;
     private Calendar c;
     private Button nextButton;
@@ -63,7 +61,7 @@ public class RegisterPageTwoFragment extends Fragment {
             }
         });
 
-        tgl_lahir = (AppCompatEditText) view.findViewById(R.id.tgl_lahir);
+        tgl_lahir = view.findViewById(R.id.tgl_lahir);
         tgl_lahir.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -93,22 +91,28 @@ public class RegisterPageTwoFragment extends Fragment {
 
         String[] data = {"Laki-Laki", "Perempuan"};
 
-        ArrayAdapter jenisKelaminadapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item_selected, data);
+        ArrayAdapter jenisKelaminadapter = new ArrayAdapter<String>(getContext(), R.layout.dropdown_menu_popup_item, data);
         jenisKelaminadapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
-        Spinner jenisKelaminSpinner = view.findViewById(R.id.spinner);
-        jenisKelaminSpinner.setAdapter(jenisKelaminadapter);
-        jenisKelaminSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getContext(), parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
-            }
+        AutoCompleteTextView editTextFilledExposedDropdown =
+                view.findViewById(R.id.filled_exposed_dropdown);
+        editTextFilledExposedDropdown.setAdapter(jenisKelaminadapter);
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+        editTextFilledExposedDropdown.setKeyListener(null);
 
-            }
-        });
+//        Spinner jenisKelaminSpinner = view.findViewById(R.id.spinner);
+//        jenisKelaminSpinner.setAdapter(jenisKelaminadapter);
+//        jenisKelaminSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(getContext(), parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
 
         mapView = view.findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);

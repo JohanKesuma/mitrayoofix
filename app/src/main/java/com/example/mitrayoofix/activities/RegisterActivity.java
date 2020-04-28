@@ -1,10 +1,6 @@
 package com.example.mitrayoofix.activities;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatEditText;
-
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatEditText;
 
 import com.example.mitrayoofix.CustomMapView;
 import com.example.mitrayoofix.R;
@@ -76,19 +75,19 @@ public class RegisterActivity extends AppCompatActivity {
         ArrayAdapter jenisKServiceadapter = new ArrayAdapter<String>(this, R.layout.spinner_item_selected, jenisService);
         jenisKServiceadapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
 
-        Spinner jenisKelaminSpinner = findViewById(R.id.spinner);
-        jenisKelaminSpinner.setAdapter(jenisKelaminadapter);
-        jenisKelaminSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(RegisterActivity.this, parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
+//        Spinner jenisKelaminSpinner = findViewById(R.id.spinner);
+//        jenisKelaminSpinner.setAdapter(jenisKelaminadapter);
+//        jenisKelaminSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(RegisterActivity.this, parent.getItemAtPosition(position).toString(), Toast.LENGTH_LONG).show();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
 
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
